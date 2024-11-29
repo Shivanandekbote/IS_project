@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "main.cpp",
+                "-o",
+                "main",
+                "-lcrypto",
+                "-lssl",
+                "-I/usr/include/openssl", // Adjust based on OpenSSL's include path
+                "-I/usr/include/cryptopp", // Adjust based on Crypto++'s include path
+                "-L/usr/lib",             // Adjust based on library locations
+                "-lcryptopp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
